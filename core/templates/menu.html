@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'dist/css/bootstrap.min.css' %} ">
+    <title>CAMPEONATO</title>
+</head>
+
+<style>
+    body {
+        background-image: url('http://127.0.0.1:8000/static/img/fondo2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body style="background-color:white;">
+
+{% block cabecera %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a style="color:red" class="navbar-brand" href="{% url 'menu' %}">CAMPEONATO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a style="color:black " class="nav-link"
+                           href="{% url 'consulta_usuario' %}">Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:black " class="nav-link"
+                           href="{% url 'consultar_equipo' %}">Equipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:black " class="nav-link" href="{% url 'consultar_torneo' %}">Campeonatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:black " class="nav-link" href="{% url 'consultar_trofeo' %}">Trofeos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+{% block contenido %}  <h1></h1>   {% endblock %}
+{% block pie %}  <h1></h1>   {% endblock %}
+{% load static %}
+<script src="{% static 'dist/js/bootstrap.min.js' %} ">
+</script>
+</body>
+</html>

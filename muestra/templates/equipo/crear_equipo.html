@@ -1,0 +1,8 @@
+{% extends "menu.html" %}
+{% block contenido %} <h1>Crear equipo nuevo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn-primary">Guardar</button>
+    </form>
+{% endblock %}

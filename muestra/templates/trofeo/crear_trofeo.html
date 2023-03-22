@@ -1,0 +1,9 @@
+{% extends "menu.html" %}
+{% block contenido %}
+    <h1>Agregar un nuevo trofeo</h1>
+    <form method="post">
+        {% csrf_token %}
+          {{ form }}
+        <button type="submit" class="btn-primary">Guardar</button>
+    </form>
+{% endblock %}

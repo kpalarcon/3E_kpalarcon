@@ -1,0 +1,9 @@
+{% extends "menu.html" %}
+{% block contenido %} <h1>Campeonato</h1>
+     <h1> Ver Torneos </h1>
+     <form method="post">
+         {% csrf_token %}
+           {{ form }}
+         <button type="submit" class="btn-primary" >Guardar</button>
+     </form>
+{% endblock %}
